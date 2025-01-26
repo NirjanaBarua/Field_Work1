@@ -1,15 +1,24 @@
-//print from 1 to 10
-
-#include<bits/stdc++.h>
+// print from 1 to 10
+// print fibonacchi number
+#include <bits/stdc++.h>
 using namespace std;
+
+int fib(int n)
+{
+
+    if (n == 0)
+        return 0;
+    if (n == 1)
+        return 1;
+
+    return fib(n - 1) + fib(n - 2);
+}
 
 int main()
 {
-    int i;
-    for(i=1;i<=10;i++)
-    {
-        cout<<i<<" ";
-    }
-
+    int n;
+    cin>>n;
+    int fibo= fib(n);
+    cout<<fibo;
     return 0;
 }
